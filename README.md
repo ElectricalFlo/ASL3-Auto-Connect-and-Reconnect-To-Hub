@@ -42,6 +42,7 @@ Change the values to match your own node numbers, for example:
 
 LOCAL_NODE="YOUR NODE NUMBER"
 TARGET_NODE="THE HUB YOU WANT TO AUTO CONNECT TO"
+
 Save and exit.
 
 
