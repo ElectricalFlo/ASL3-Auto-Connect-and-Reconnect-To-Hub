@@ -4,10 +4,6 @@ Auto-connect and auto-reconnect helper for AllStarLink / ASL3 nodes.
 
 ## Install
 
-## 📌 How Configuration Works (IMPORTANT)
-
-**Nothing is configured on GitHub.**  
-GitHub is only used to share the installer and scripts.
 
 All configuration is done **locally on your ASL3 node after installation**.
 
