@@ -1,6 +1,4 @@
-# ASL3-Auto-Connect-To-Hub
-If you've ever wanted to have your node automatically connect to your favorite hub this method works.
-# ASL3 AutoLink (Auto-Reconnect)
+
 
 Auto-connect and auto-reconnect helper for AllStarLink / ASL3 nodes.
 
