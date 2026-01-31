@@ -55,7 +55,7 @@ sudo journalctl -u asl3-autolink.service -f
 🗣 One-sentence summary
 Run the installer from GitHub, then edit /etc/asl3-autolink.conf on your node to set your node numbers.
 
-#IF YOU WOULD LIKE TO UNINSTALL
+### IF YOU WOULD LIKE TO UNINSTALL
 ## 🧹 Uninstall ASL3 AutoLink
 
 To completely remove ASL3 AutoLink from your node, run the following commands
@@ -66,3 +66,30 @@ To completely remove ASL3 AutoLink from your node, run the following commands
 ### 1️⃣ Stop and disable the service
 ```bash
 sudo systemctl disable --now asl3-autolink.service
+````
+2️⃣ Remove installed files
+````bash
+sudo rm -f /etc/systemd/system/asl3-autolink.service
+sudo rm -f /usr/local/sbin/asl3-autolink.sh
+sudo rm -f /etc/asl3-autolink.conf
+````  
+
+⚠️ This removes your local configuration file as well.
+
+3️⃣ Reload systemd
+````bash
+sudo systemctl daemon-reload
+````  
+4️⃣ (Optional) Remove the cloned repository
+
+If you no longer want the source files on your node:
+````bash
+cd ~
+rm -rf ASL3-Auto-Connect-and-Reconnect-To-Hub
+````  
+🔍 Verify removal (optional)
+````bash
+systemctl list-unit-files | grep asl3
+````  
+
+If nothing is returned, ASL3 AutoLink has been fully removed.
