@@ -13,7 +13,7 @@ All configuration is done **locally on your ASL3 node after installation**.
 
 ### 1️⃣ Clone and install (run on your ASL3 node)
 ```bash
-git clone https://github.com/ElectricalFlo/ASL3-Auto-Connect-and-Reconnect-To-Hub.git
+git clone https://github.com/N2CFX/ASL3-Auto-Connect-and-Reconnect-To-Hub.git
 cd ASL3-Auto-Connect-and-Reconnect-To-Hub
 sudo bash install.sh
 
