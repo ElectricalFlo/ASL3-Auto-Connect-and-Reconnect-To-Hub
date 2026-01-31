@@ -1,0 +1,13 @@
+[Unit]
+Description=ASL3 AutoLink (auto-reconnect)
+After=network-online.target asterisk.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/asl3-autolink.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
