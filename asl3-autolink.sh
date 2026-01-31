@@ -24,7 +24,6 @@ wait_for_asterisk() {
 }
 
 is_linked() {
-  # Match target node as a whole number in rpt stats output
   asterisk -rx "rpt stats ${LOCAL_NODE}" 2>/dev/null | grep -qE "(^|[^0-9])${TARGET_NODE}([^0-9]|$)"
 }
 
@@ -35,7 +34,7 @@ do_connect() {
 echo "ASL3 AutoLink starting: ${LOCAL_NODE} -> ${TARGET_NODE}"
 sleep "${BOOT_GRACE}"
 
-wait_for_asterisk || { echo "Asterisk not ready; exiting."; exit 0; }
+wait_for_asterisk || exit 0
 
 while true; do
   if is_linked; then
@@ -47,7 +46,7 @@ while true; do
   for ((i=1; i<=CONNECT_RETRIES; i++)); do
     do_connect
     sleep "${RETRY_DELAY}"
-    is_linked && { echo "Reconnected."; break; }
+    is_linked && break
   done
 
   sleep "${CHECK_INTERVAL}"
