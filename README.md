@@ -1,3 +1,16 @@
+##Step One: Make sure you have git installed on your node
+````bash
+sudo apt update
+sudo apt install -y git
+````
+Verify that git is installed
+````bash
+git --version
+````
+You should see something like this
+````bash
+git version 2.xx.x
+````
 
 
 Auto-connect and auto-reconnect helper for AllStarLink / ASL3 nodes.
